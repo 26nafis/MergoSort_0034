@@ -31,6 +31,15 @@ void input() {
 void mergesort(int low, int high) {
 
     if (low >= high) { //step 1
-
+        return;       //step1.a
     }
+
+    int mid = (low + high) /2; //step 2
+
+    //step 3
+    //fungsi rekursi > memangil diri sendiri 
+    mergesort(low, mid);     //step3.a
+    mergesort(mid + 1, high); // step 3.b
+
+    //step 4
 }
