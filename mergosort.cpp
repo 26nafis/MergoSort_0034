@@ -20,7 +20,7 @@ void input() {
 
     cout <<"\n=============================";
     cout << "\ninputkan isi element array";
-    cout << "\n============================="; << endl;
+    cout << "\n=============================" << endl;
 
     for (int i = 0; i < n; i++){
         cout << "array index ke - " << i << "i ";
@@ -42,4 +42,22 @@ void mergesort(int low, int high) {
     mergesort(mid + 1, high); // step 3.b
 
     //step 4
+    int i = low; //step 4.a
+    int j = mid + 1; //step4.b
+    int k = low; // step4.c
+
+    while (i <= mid && j <= high){ //step 4.d
+        if (arr[i] <= arr[j]) {
+            B[k] = arr[i];
+            i++;
+        } else {
+            B[k] = arr[j];
+            i++;
+        }
+        k++;
+    }
+
+    while (j <= high) { //step 4.e
+        B[k] = arr[j]; // step 4.e.1
+    }
 }
